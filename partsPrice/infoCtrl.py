@@ -15,7 +15,7 @@ class webGet():
         # 'chip1stop':"https://www.chip1stop.com/view/searchResult/SearchResultTop?partSameFlg=true&keyword=",
         # 'digikey':"https://www.digikey.jp/products/ja?pkeyword=&keywords=",
         'google検索':"https://www.google.co.jp/search?q=",
-        'yahoo検索':"https://search.yahoo.co.jp/search?p=",
+        'yahoo検索':"https://search.yahoo.com/search?p=",
         }
 
     def PageTitle ( self, searchKeyword ) :
