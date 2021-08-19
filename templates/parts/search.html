@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h2>型番完全一致検索</h2>
+        <p>↓型番を入力</p>
+        <form action="" method="post">{% csrf_token %}
+            <input type="text" name="keyword" value="{{ keyword }}"/>
+            <input type="submit" value="検索"/>
+        </form>
+        <hr>
+        {% if keyword != '' %}
+            <h2>"{{ keyword }}"の検索結果</h2>
+            <ul>
+            {% for val in all_items.values %}
+                <li>{{ val }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+    </body>
+</html>

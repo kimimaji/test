@@ -1,0 +1,44 @@
+C:\Users\m_kojima\Desktop\作業用\djangogirls
+$ python -m venv myvenv
+$ myvenv\Scripts\activate
+
+VS Code使用→Windows Powershellベースの統合ターミナルが一緒になっているので、
+統合ターミナルを使う場合、仮想環境を有効にするために下記のコマンドを実行してください：
+（エディタのウィンドウとコマンドラインのウィンドウを行き来する必要がなくなる）
+-----------------------------------------
+vs-codeで仮想に入る
+-----------------------------------------
+$ . myvenv\Scripts\activate.ps1
+
+※envを抜けるとき：deactivate
+(myvenv) ~$ python -m pip install --upgrade pip（最新のpipにしておく）
+
+-----------------------------------------
+app_dir作成
+-----------------------------------------
+(myvenv) ~$ python manage.py startapp blog
+
+-----------------------------------------
+python 起動
+-----------------------------------------
+$ python manage.py runserver
+
+$ git init
+-----------------------------------------
+pythonanywhere UP
+-----------------------------------------
+<from vs code terminal>
+$ git status
+$ git add --all .
+$ git status
+$ git commit -m "Modified templates to display posts from database."
+$ git push
+<from pythonanywhere bash>
+$ git pull
+
+-----------------------------------------
+DB(テーブル)作成
+-----------------------------------------
+app_dir/models.py に定義作成
+~$ python .\manage.py makemigrations
+~$ python .\manage.py migrate
